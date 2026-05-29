@@ -7,8 +7,7 @@ export default function WidgetPreviewScreen({ onBack }: { onBack: () => void }) 
   const total = getTodayTotal();
   const progress = todayGoalMl > 0 ? total / todayGoalMl : 0;
   const todayData = getTodayData();
-  const lastTemp = todayData.records.length > 0 ? todayData.records[todayData.records.length - 1].tempC : 21.3;
-  const consumed = total >= 1000 ? (total/1000).toFixed(1).replace('.',',') : String(total);
+  const lastTemp = todayData.records.length > 0 ? todayData.records[todayData.records.length - 1].tempC : 12.5;
 
   return (
     <div className="screen">
